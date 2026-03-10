@@ -1,0 +1,34 @@
+body{
+    background-image: url("https://imgs.search.brave.com/RVmFaqFjzU8QHpaPRX_gMWW8JBIkiwRLoj8CkYHrAcM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNS8w/NC8wMS8xNi8zMi9y/ZWQtc3RhcmJ1cnN0/LTcwMjY0NF82NDAu/anBn");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 120px;
+}
+
+
+
+h1{
+    color: white;
+    border: 0cap;
+
+}
+
+
+p{
+    color: white;
+    
+    border-color: black;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:darkslategrey;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
