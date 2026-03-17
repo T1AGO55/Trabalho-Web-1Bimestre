@@ -19,7 +19,8 @@ body {
     align-items: start;
 }
 
-h1 {
+.nome{
+    
     color: black;
     background-color: white;
     justify-self: left;
@@ -27,6 +28,19 @@ h1 {
     
 }
 
+.logo{
+    width: 80px;
+    border-radius: 50px;
+
+}
+
+
+.aviso{
+color: whitesmoke;
+
+
+
+}
 
 p {
     color: black;
