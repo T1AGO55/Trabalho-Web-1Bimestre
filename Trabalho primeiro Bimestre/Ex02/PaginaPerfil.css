@@ -23,7 +23,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.762);
+    background-color: rgba(0, 0, 0, 0.896);
     color: white;
     padding: 1rem 5%;
     display: flex;
@@ -105,7 +105,7 @@ button {
 }
 
 .Informacoes-do-vendedor {
-    background-color: rgba(255, 255, 255, 0.7); 
+    background-color: rgba(60, 60, 60, 0.7); 
     border-radius: 20px;
     width: 90%;
     max-width: 70rem;
@@ -115,21 +115,24 @@ button {
     flex-direction: column; 
     align-items: center;    
     text-align: center;    
-    gap: 10px;             
+    gap: 10px;            
+    border: 5px solid white;
+ 
 }
 
 .foto-perfil {
     border-radius: 50%;     
-    width: 180px;           
-    height: 180px;
+    width: 18rem;           
+    height: 18rem;
     object-fit: cover;     
     margin-bottom: 1rem;
     border: 5px solid white;
+    object-fit: fill;
 }
 
 .info {
     margin-top: 5px;
-    background-color: rgb(133, 133, 133);
+    background-color: rgb(210, 210, 210);
     padding: 8px 15px;
     border-radius: 5px;
     font-size: 1.5rem;     
@@ -137,6 +140,7 @@ button {
     max-width: 50rem;
     color: #333;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 2px solid rgb(0, 0, 0);
 }
 
 
@@ -157,9 +161,13 @@ button {
   }
 
   .info {
-        font-size: 1.2rem;   
-        max-width: 40rem;
-  
+        font-size: 1.1rem;   
+  }
+
+  .foto-perfil {
+    border-radius: 50%;     
+    width: 9rem;           
+    height: 9rem;
   }
   .aviso {
     order: 2;
