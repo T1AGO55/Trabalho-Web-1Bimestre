@@ -47,9 +47,6 @@ header h1 {
 /*Tablet*/
 @media (max-width: 1024px) {}
 
-
-/* Celular*/
-@media (max-width: 600px) {
   .logo {
     width: 50px;
     height: auto;
@@ -217,3 +214,6 @@ button {
         display: flex;
     }
 }
+
+
+
