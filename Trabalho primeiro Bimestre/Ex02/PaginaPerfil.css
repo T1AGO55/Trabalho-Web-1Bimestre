@@ -1,65 +1,18 @@
-html {
-  font-size: xx-small;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-image: url("https://i.redd.it/17acbvxdcc291.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0;
-  padding-top: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border-color: black;
-}
-
-
-.logo {
-  border-radius: 5000rem;
-  width: 10rem;
-  height: 10rem;
-}
-
-
-.InformacoesDoVendedor {
-  background-color: rgba(255, 255, 255, 0.516);
-  border-radius: 20px;
-  width: 90%;
-  max-width: 600px;
-  min-height: 400px;
-  margin: 20px auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.container{
-  display: flex;
-  align-items: flex-start;
-}
-
-.nome {
-  color: black;
-  background-color: white;
-  justify-self: auto;
-
-}
-
-
-
-.aviso {
-  color: whitesmoke;
-
-}
-
-
-p {
-  color: black;
-  font-size: clamp(14px, 2vw, 20px);
-  margin-left: 25px;
-  text-align: center;
+    background-image: url("https://i.redd.it/17acbvxdcc291.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -116,52 +69,151 @@ header h1 {
 
   .InformacoesDoVendedor {
     display: flex;
-    width: 80%;
-    padding: 10px;
-  }
-
-  .nome {
-    align-self: flex-start;
-    background-color: aliceblue;
-    font-size: medium;
-  }
-
-
-  .botoes-header {
-    overflow: auto;
-    display: flex;
-  }
-
-  button {
-    width: 100%;
-  }
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
+.logo {
+    width: 60px;
+    border-radius: 50px;
+}
 
-
-img {
-  border-radius: 5000rem;
-  width: 15rem;
-  height: 15rem;
+.aviso {
+    color: whitesmoke;
+    margin-left: 15px;
 }
 
 .botoes-header {
-  margin-left: auto;
-  display: flex;
-  gap: 10px;
-  margin-right: 50px;
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
 
+button {
+    background-color: cadetblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 
-button {
-  background-color: cadetblue;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none; 
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-icon::before {
+    content: "☰";
+}
+
+
+#menu-toggle:checked + .menu-icon::before {
+    content: "✖";
+}
+
+
+.opcoes {
+    display: none; 
+    flex-direction: column;
+    background-color: darkslategrey;
+    position: absolute;
+    top: 100%; 
+    right: 5%;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    gap: 15px;
+}
+
+.opcoes a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 5px;
+}
+
+.Informacoes-do-vendedor {
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;    
+    gap: 10px;             
+}
+
+.foto-perfil {
+    border-radius: 50%;     
+    width: 180px;           
+    height: 180px;
+    object-fit: cover;     
+    margin-bottom: 1rem;
+    border: 5px solid white;
+}
+
+.nome {
+    margin-top: 5px;
+    background-color: rgb(133, 133, 133);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;     
+    width: 100%;           
+    max-width: 400px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+@media (max-width: 426px) {
+    .botoes-header {
+        display: none; 
+    }
+
+    .menu-mobile {
+        margin-left: auto; 
+        order: 3;
+        display: flex;
+        align-items: center;
+    }
+
+  .logo {
+    order: 1;
+  }
+
+  .aviso {
+    order: 2;
+    font-size: 1rem;
+  }
+  
+   .menu-icon {
+    display: block;
+    order: 3; 
+  }
+
+  .opcoes {
+    right: 5%; 
+    left: auto;
+  }
+
+
+    #menu-toggle:checked ~ .opcoes {
+        display: flex;
+    }
 }
