@@ -10,8 +10,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: fit-content;
-    margin-top: 120px;
+    width: 100%;
+    height: 90vh;
+    margin-top: 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +23,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.762);
+    background-color: rgba(0, 0, 0, 0.896);
     color: white;
     padding: 1rem 5%;
     display: flex;
@@ -35,7 +36,7 @@ header {
 .logo {
     width: 60px;
     border-radius: 50px;
-    border: 5px solid rgb(105, 18, 162);;
+    border: 5px solid rgb(105, 18, 162);
 }
 
 .aviso {
@@ -85,7 +86,7 @@ button {
 .opcoes {
     display: none; 
     flex-direction: column;
-    background-color: darkslategrey;
+    background-color: rgb(105, 18, 162);
     position: absolute;
     top: 100%; 
     right: 5%;
@@ -104,42 +105,46 @@ button {
 }
 
 .Informacoes-do-vendedor {
-    background-color: rgba(255, 255, 255, 0.7); 
+    background-color: rgba(60, 60, 60, 0.7); 
     border-radius: 20px;
     width: 90%;
-    max-width: 500px;
+    max-width: 70rem;
     margin: 20px auto;
     padding: 2rem;
     display: flex;
     flex-direction: column; 
     align-items: center;    
     text-align: center;    
-    gap: 10px;             
+    gap: 10px;            
+    border: 5px solid white;
+ 
 }
 
 .foto-perfil {
     border-radius: 50%;     
-    width: 180px;           
-    height: 180px;
+    width: 18rem;           
+    height: 18rem;
     object-fit: cover;     
     margin-bottom: 1rem;
     border: 5px solid white;
+    object-fit: fill;
 }
 
-.nome {
+.info {
     margin-top: 5px;
-    background-color: rgb(133, 133, 133);
+    background-color: rgb(210, 210, 210);
     padding: 8px 15px;
     border-radius: 5px;
-    font-size: 1.2rem;     
+    font-size: 1.5rem;     
     width: 100%;           
-    max-width: 400px;
+    max-width: 50rem;
     color: #333;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 2px solid rgb(0, 0, 0);
 }
 
 
-@media (max-width: 426px) {
+@media (max-width: 580px) {
     .botoes-header {
         display: none; 
     }
@@ -155,6 +160,15 @@ button {
     order: 1;
   }
 
+  .info {
+        font-size: 1.1rem;   
+  }
+
+  .foto-perfil {
+    border-radius: 50%;     
+    width: 9rem;           
+    height: 9rem;
+  }
   .aviso {
     order: 2;
     font-size: 1rem;
