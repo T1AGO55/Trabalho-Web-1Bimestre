@@ -6,12 +6,13 @@
 }
 
 body {
-  background-image: url("https://i.redd.it/17acbvxdcc291.jpg");
+  background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin-top: 8rem;
-  height: 50rem;
+  min-height: 100vh;
+  font-family: Arial;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,12 +106,33 @@ button {
   border-radius: 20px;
   padding: 2rem;
   margin-top: 2rem;
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-align: left;
 }
 
+
+
+@media(max-width: 1024px){
+  .texto-menu{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+}
+
+
 /* MOBILE */
 @media (max-width: 580px) {
+
+  .texto-menu h1{
+    text-align: center;
+  }
+
+  .texto-menu{
+    font-size: 2.8rem;
+    background-size: 4rem;
+  }
 
   /* some com botões */
   .botoes-header {

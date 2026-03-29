@@ -13,10 +13,25 @@ body {
   margin-top: 8rem;
   height: 50rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
+
+.carro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: rgb(177, 177, 177);
+  opacity: ;
+}
+
+
+.carro img {
+  width: 100%;
+}
 
 header {
   position: fixed;
