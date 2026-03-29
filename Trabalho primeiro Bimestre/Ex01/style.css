@@ -38,24 +38,27 @@ header {
 
 .aviso {
   color: white;
-  margin-left: 15px;
+  margin-left: 1rem;
+  font-size: x-large;
 }
 
 .botoes-header {
-    margin-left: auto;
-    display: flex;
-    gap: 10px;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 button {
-    background-color: rgb(105, 18, 162);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
+  background-color: rgb(105, 18, 162);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* MENU HAMBURGUER */
@@ -73,7 +76,7 @@ button {
   content: "☰";
 }
 
-#menu-toggle:checked + .menu-icon::before {
+#menu-toggle:checked+.menu-icon::before {
   content: "✖";
 }
 
@@ -120,16 +123,17 @@ button {
 
   .aviso {
     order: 2;
-    font-size: 1rem;
-  }
-  .menu-mobile{
-       margin-left: auto; 
-        order: 3;
-        display: flex;
-        align-items: center;
+    font-size: x-large;
   }
 
-  .texto-menu{
+  .menu-mobile {
+    margin-left: auto;
+    order: 3;
+    display: flex;
+    align-items: center;
+  }
+
+  .texto-menu {
     flex-wrap: wrap;
   }
 
@@ -141,7 +145,7 @@ button {
     margin-left: auto;
   }
 
-  #menu-toggle:checked ~ .opcoes {
+  #menu-toggle:checked~.opcoes {
     display: flex;
   }
 }

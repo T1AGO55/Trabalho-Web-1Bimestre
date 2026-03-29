@@ -7,120 +7,175 @@
 
 /* BASE */
 body {
-  font-family: Arial, sans-serif;
+  background-image: url("https://i.redd.it/17acbvxdcc291.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 8rem;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* HEADER */
-.header {
+header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background: #2f4f4f;
-  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 5%;
   display: flex;
   align-items: center;
-  padding: 1rem;
-  gap: 15px;
   z-index: 1000;
 }
 
-/* LOGO */
-.logo img {
-  width: 50px;
-  height: auto;
+.botoes-header{
+  visibility: hidden;
+  display: none;
 }
 
-/* HAMBURGUER */
+
+
+.aviso {
+  font-size: x-large;
+  color: white;
+  margin-left: 1rem;
+  flex: 1;
+}
+
+/* LOGO */
+
+.logo {
+  width: 60px;
+  border-radius: 50%;
+  border: 5px solid rgb(105, 18, 162);
+}
+
+/* MENU HAMBURGUER */
 #menu-toggle {
   display: none;
 }
 
 .menu-icon {
+  color: aliceblue;
+  display: block;
   margin-left: auto;
-  cursor: pointer;
-}
+  font-size: 30px;
+} 
 
 .menu-icon::before {
   content: "☰";
-  font-size: 30px;
 }
 
-/* MENU */
-.menu {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.menu a {
-  padding: 10px;
-  text-decoration: none;
-  color: white;
-  border-radius: 5px;
-}
-
-.menu a:hover {
-  background: rgba(255,255,255,0.2);
-}
-
-/* ABRIR MENU */
-#menu-toggle:checked + .menu-icon + .menu {
-  display: flex;
-}
-
-/* TROCAR ÍCONE */
-#menu-toggle:checked + .menu-icon::before {
+#menu-toggle:checked+.menu-icon::before {
   content: "✖";
 }
 
-/* CONTAINER */
-.container {
-  margin-top: 80px;
-  padding: 1rem;
-  display: grid;
-  gap: 20px;
+.menu-mobile {
+  margin-left: auto;
+  order: 3;
+  display: flex;
+  align-items: center;
 }
 
-/* CARDS */
-.card {
-  background: lightgray;
-  padding: 40px;
-  text-align: center;
-  border-radius: 10px;
+.opcoes {
+  display: none;
+  flex-direction: column;
+  background-color: rgb(105, 18, 162);
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  width: 200px;
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  gap: 10px;
 }
+
+.opcoes a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#menu-toggle:checked ~ .opcoes {
+    display: flex;
+  }
+
 
 /* 📲 TABLET */
-@media (min-width: 768px) {
+@media (min-width: 581px) {
 
-  .container {
-    grid-template-columns: repeat(2, 1fr);
+  .opcoes{
+    visibility: hidden;
+    display: none;
   }
+  .opcoes a{
+  visibility: hidden;
+    display: none;
+  }
+
+  
+  botoes-header {
+  display: none;
+  visibility: hidden;
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+}
+
+button {
+  background-color: rgb(105, 18, 162);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+  .menu-icon{
+    visibility: hidden;
+    display: none;
+  }
+
+  .botoes-header{
+    visibility: visible;
+    display: flex;
+  }
+
+  
+
 
 }
 
 /* 💻 DESKTOP */
 @media (min-width: 1024px) {
 
-  .menu {
-    display: flex !important;
-    flex-direction: row;
-    margin-left: auto;
-    width: auto;
-    gap: 20px;
-  }
+  
+.opcoes {
+  display: flex;
+  flex-direction: row;
+  position: static;
+  background: none;
+}
+
+
 
   .menu-icon {
     display: none;
   }
 
   .container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    max-width: 1200px;
-    margin: 100px auto;
-  }
+    display: grid;
+    grid: 1fr;
+    gap: 10px;
 
+  }
 }
+
 
 /* 🖥️ FULL HD GRANDE */
 @media (min-width: 1440px) {
