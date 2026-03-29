@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* BASE */
 body {
   background-image: url("https://i.redd.it/17acbvxdcc291.jpg");
   background-repeat: no-repeat;
@@ -14,11 +13,26 @@ body {
   margin-top: 8rem;
   height: 50rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
-/* HEADER */
+
+.carro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: rgb(177, 177, 177);
+  opacity: ;
+}
+
+
+.carro img {
+  width: 100%;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -31,26 +45,35 @@ header {
   z-index: 1000;
 }
 
-.botoes-header{
-  visibility: hidden;
-  display: none;
-}
-
-
-
-.aviso {
-  font-size: x-large;
-  color: white;
-  margin-left: 1rem;
-  flex: 1;
-}
-
-/* LOGO */
-
 .logo {
   width: 60px;
   border-radius: 50%;
   border: 5px solid rgb(105, 18, 162);
+}
+
+.aviso {
+  color: white;
+  margin-left: 1rem;
+  font-size: x-large;
+}
+
+.botoes-header {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  background-color: rgb(105, 18, 162);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* MENU HAMBURGUER */
@@ -59,11 +82,10 @@ header {
 }
 
 .menu-icon {
-  color: aliceblue;
-  display: block;
-  margin-left: auto;
+  display: none;
   font-size: 30px;
-} 
+  cursor: pointer;
+}
 
 .menu-icon::before {
   content: "☰";
@@ -71,13 +93,6 @@ header {
 
 #menu-toggle:checked+.menu-icon::before {
   content: "✖";
-}
-
-.menu-mobile {
-  margin-left: auto;
-  order: 3;
-  display: flex;
-  align-items: center;
 }
 
 .opcoes {
@@ -99,89 +114,44 @@ header {
   font-weight: bold;
 }
 
-#menu-toggle:checked ~ .opcoes {
+
+/* MOBILE */
+@media (max-width: 580px) {
+
+  /* some com botões */
+  .botoes-header {
+    display: none;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .aviso {
+    order: 2;
+    font-size: x-large;
+  }
+
+  .menu-mobile {
+    margin-left: auto;
+    order: 3;
     display: flex;
+    align-items: center;
   }
 
-
-/* 📲 TABLET */
-@media (min-width: 581px) {
-
-  .opcoes{
-    visibility: hidden;
-    display: none;
+  .texto-menu {
+    flex-wrap: wrap;
   }
-  .opcoes a{
-  visibility: hidden;
-    display: none;
-  }
-
-  
-  botoes-header {
-  display: none;
-  visibility: hidden;
-  margin-left: auto;
-  display: flex;
-  gap: 1.5rem;
-}
-
-button {
-  background-color: rgb(105, 18, 162);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-  .menu-icon{
-    visibility: hidden;
-    display: none;
-  }
-
-  .botoes-header{
-    visibility: visible;
-    display: flex;
-  }
-
-  
-
-
-}
-
-/* 💻 DESKTOP */
-@media (min-width: 1024px) {
-
-  
-.opcoes {
-  display: flex;
-  flex-direction: row;
-  position: static;
-  background: none;
-}
-
-
 
   .menu-icon {
-    display: none;
+    color: aliceblue;
+    visibility: visible;
+    display: block;
+    order: 3;
+    margin-left: auto;
   }
 
-  .container {
-    display: grid;
-    grid: 1fr;
-    gap: 10px;
-
+  #menu-toggle:checked~.opcoes {
+    display: flex;
   }
-}
-
-
-/* 🖥️ FULL HD GRANDE */
-@media (min-width: 1440px) {
-
-  .container {
-    max-width: 1400px;
-  }
-
 }
