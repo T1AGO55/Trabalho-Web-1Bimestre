@@ -103,11 +103,14 @@ button {
 .texto-menu {
   display: flex;
   background-color: rgba(202, 201, 201, 0.669);
+  margin-left: 1rem;
+  margin-right: 1rem;
   border-radius: 20px;
   padding: 2rem;
   margin-top: 2rem;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   text-align: left;
+  gap: 1rem;
 }
 
 
@@ -130,7 +133,7 @@ button {
   }
 
   .texto-menu{
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     background-size: 4rem;
   }
 
@@ -153,10 +156,6 @@ button {
     order: 3;
     display: flex;
     align-items: center;
-  }
-
-  .texto-menu {
-    flex-wrap: wrap;
   }
 
   .menu-icon {
