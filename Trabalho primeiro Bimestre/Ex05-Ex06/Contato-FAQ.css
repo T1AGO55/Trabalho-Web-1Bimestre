@@ -66,8 +66,6 @@ form {
     padding: 20px;
     background: white;
     border-radius: 10px;
-
-    /* AQUI ESTÁ O BOX-SHADOW */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 input, textarea {
@@ -117,6 +115,19 @@ input, textarea {
     text-decoration: none;
     font-weight: bold;
 }
+
+details{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+summary{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
 
 
 /* MOBILE */
