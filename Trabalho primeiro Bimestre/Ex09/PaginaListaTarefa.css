@@ -6,12 +6,11 @@
 }
 
 body {
-  background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin-top: 8rem;
-  width: 100%;
   min-height: 100%;
   font-family: Arial;
   display: flex;
@@ -101,42 +100,45 @@ button {
   font-weight: bold;
 }
 
-.texto-menu {
+.tarefas {
   display: flex;
-  background-color: rgba(202, 201, 201, 0.669);
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  list-style: none;
   margin-left: 1rem;
   margin-right: 1rem;
   border-radius: 20px;
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 8rem;
   font-size: 2.5rem;
   text-align: left;
   gap: 1rem;
+  background-color: rgba(210, 195, 195, 0.559);
+  box-shadow: 2px black;
+  padding: 20px;
+  box-shadow: 0 2px 200px rgba(0, 0, 0, 0.767);
+}
+
+.tarefas li {
+  margin-bottom: 10px;
+}
+
+.tarefas input {
+  margin-right: 10px;
+}
+
+.tarefas input:checked+label {
+  text-decoration: line-through;
+  color: gray;
 }
 
 
-
-@media(max-width: 1024px){
-  .texto-menu{
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-
-}
 
 
 /* MOBILE */
 @media (max-width: 580px) {
 
-  .texto-menu h1{
-    text-align: center;
-  }
-
-  .texto-menu{
-    font-size: 2.3rem;
-    background-size: 4rem;
-  }
 
   /* some com botões */
   .botoes-header {

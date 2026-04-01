@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produto</title>
-    <link rel="stylesheet" href="PaginaProduto.css">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="PaginaListaTarefa.css">
 </head>
 <header>
     <img class="logo" src="/Trabalho primeiro Bimestre/img/logo.png" alt="">
-    <h1 class="aviso">Produto</h1>
+    <h1 class="aviso">Tarefas</h1>
 
 
     <div class="menu-mobile">
@@ -28,7 +28,8 @@
 
     <div class="botoes-header">
 
-        <a href="/Trabalho primeiro Bimestre/Ex01/Home.html"><button>Home</button></a>
+        <a href="/Trabalho primeiro Bimestre/Ex08/PaginaProduto.html"><button>Produto</button></a>
+        <a href="/Trabalho primeiro Bimestre/Ex05-Ex06/Contato-FAQ.html"><button>Contato</button></a>
         <a href="/Trabalho primeiro Bimestre/Ex04/Blog.html"><button>Blog</button></a>
         <a href="/Trabalho primeiro Bimestre/Ex03/PaginaPortifolio.html">
             <button>Portifolio</button></a>
@@ -41,19 +42,27 @@
 
 <body>
 
+    <ul class="tarefas">
+        <li>
+            <input type="checkbox" id="t1">
+            <label>Agendar Teste Drive</label>
+        </li>
+        <li>
+            <input type="checkbox" id="t2">
+            <label>Trocar Oleo do Carro</label>
+        </li>
+        <li>
+            <input type="checkbox" id="t3">
+            <label>Encomendar BMW nova edicao 2027</label>
+        </li>
 
-    <video autoplay muted loop class="video-fundo">
-        <source src="/Trabalho primeiro Bimestre/video/mustang.mp4">
-    </video>
+        <button>Adicionar</button>
+        <button>Editar</button>
+        <button>Excluir</button>
 
-    <div class="venda">
-        <img src="/Trabalho primeiro Bimestre/img/Mustang.webp" alt="">
-        <h3>Mustang boss 429</h3>
-        <p>Ano: 1970</p>
-        <p>Preço: R$ 956.777</p>
-        <button>Comprar</button>
 
-    </div>
+    </ul>
+
 </body>
 
 </html>
