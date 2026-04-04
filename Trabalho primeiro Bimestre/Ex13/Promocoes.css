@@ -139,7 +139,7 @@ button {
 
 
 /* MOBILE */
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
 
     .blog li {
         flex-direction: column;
