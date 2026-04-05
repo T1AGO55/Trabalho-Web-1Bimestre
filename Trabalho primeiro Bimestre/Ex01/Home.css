@@ -6,22 +6,24 @@
 }
 
 body {
-  background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
-  background-repeat: no-repeat;
+  background-image: url('../img/imagem-fundo-home.jpeg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
-  margin-top: 8rem;
-  width: 100%;
-  min-height: calc(100vh - 8rem);
-  font-family: Arial;
+  font-family: Arial, sans-serif;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+  padding-top: 6rem; 
+
+   min-height: calc(100vh - 8rem);
+  overflow: scroll hidden hidden;
 }
 
-
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -37,35 +39,75 @@ header {
 .logo {
   width: 60px;
   border-radius: 50%;
-  border: 5px solid rgb(105, 18, 162);
+  border: 3px solid rgb(105, 18, 162);
 }
 
 .aviso {
   color: white;
   margin-left: 1rem;
-  font-size: x-large;
+  font-size: 1.5rem;
 }
 
 .botoes-header {
   margin-left: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
 }
 
 button {
   background-color: rgb(105, 18, 162);
   color: white;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
-/* MENU HAMBURGUER */
+.banner-home {
+  width: 95%;
+  max-width: 1200px;
+  height: 50vh;
+
+  margin-top: 1rem; 
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../img/imagem-home.png");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+.banner-home h1 {
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* TEXTO */
+.texto-menu {
+  width: 95%;
+  max-width: 1200px;
+
+  background-color: rgba(202, 201, 201, 0.75);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 2rem;
+
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
 #menu-toggle {
   display: none;
 }
@@ -116,60 +158,50 @@ button {
   gap: 1rem;
 }
 
-
-
+/* TABLET */
 @media(max-width: 1024px){
-  .texto-menu{
-    display: flex;
-    flex-wrap: wrap;
+  .texto-menu {
+    flex-direction: column;
   }
 
-
+  .banner-home h1 {
+    font-size: 2.5rem;
+  }
 }
-
 
 /* MOBILE */
 @media (max-width: 580px) {
 
-  .texto-menu h1{
-    text-align: center;
-  }
-
-  .texto-menu{
-    font-size: 2.3rem;
-    background-size: 4rem;
-  }
-
-  /* some com botões */
   .botoes-header {
     display: none;
   }
 
-  .logo {
-    order: 1;
-  }
-
-  .aviso {
-    order: 2;
-    font-size: x-large;
-  }
-
   .menu-mobile {
     margin-left: auto;
-    order: 3;
     display: flex;
-    align-items: center;
   }
 
   .menu-icon {
-    color: aliceblue;
-    visibility: visible;
     display: block;
-    order: 3;
-    margin-left: auto;
+    color: white;
+    font-size: 28px;
   }
 
-  #menu-toggle:checked~.opcoes {
-    display: flex;
+  .banner-home {
+    height: 40vh;
+    padding-left: 1rem;
   }
+
+  .banner-home h1 {
+    font-size: 2rem;
+  }
+
+  .texto-menu {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  #menu-toggle:checked ~ .opcoes {
+        display: flex;
+    }
 }

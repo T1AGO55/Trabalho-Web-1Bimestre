@@ -6,17 +6,13 @@
 
 body {
     margin-top: 8rem;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     min-height: calc(100vh - 8rem);
     overflow: scroll hidden hidden;
-}
-
-body h1{
-    color: rgb(105, 18, 162);
-    font-size: 3rem;
 }
 
 
@@ -81,7 +77,7 @@ button:hover {
     content: "☰";
 }
 
-#menu-toggle:checked + .menu-icon::before {
+#menu-toggle:checked+.menu-icon::before {
     content: "✖";
 }
 
@@ -104,35 +100,36 @@ button:hover {
     font-weight: bold;
 }
 
-#menu-toggle:checked ~ .opcoes {
+#menu-toggle:checked~.opcoes {
     display: flex;
 }
 
 
-.Avaliacoes {
-    display: flex;
-    flex-wrap: wrap;
+.Equipe {
     justify-content: center;
     gap: 2rem;
     width: 50rem;
     margin-top: -2rem;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.Equipe h1 {
+    color: rgb(105, 18, 162);
+    font-size: 3rem;
 }
 
 
 .card {
     flex: 1 1 300px;
-    max-width: 300rem;
+    max-width: 350rem;
     background-color: rgba(210, 195, 195, 0.559);
     padding: 1.5rem;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
     margin-top: 1.2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
-
 
 .card h4 {
     color: rgb(105, 18, 162);
@@ -146,20 +143,22 @@ button:hover {
 }
 
 
-.Informacoes-do-avalista {
-    display: flex;
-    align-items: center;
+.Informacoes {
+    text-align: center;
     gap: 1rem;
     margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .foto {
-    width: 18rem;           
+    justify-self: center;
+    width: 18rem;
     height: 18rem;
-    object-fit: cover;     
+    object-fit: cover;
     margin-bottom: 1rem;
     border: 5px solid white;
-    object-fit: fill;
+    border-radius: 0.9rem;
 }
 
 .info {
@@ -175,30 +174,39 @@ button:hover {
     }
 
     .menu-icon {
+        color: aliceblue;
+        visibility: visible;
         display: block;
+        order: 3;
         margin-left: auto;
     }
 
-    .Avaliacoes {
+    .menu-mobile {
+        margin-left: auto;
+        order: 3;
+        display: flex;
+        align-items: center;
+    }
+
+    .Equipe {
+        font-size: 0.9rem;
+    }
+
+    .Equipe h1 {
         padding: 1rem;
     }
 
     .card {
-        font-size: 0.5rem;
+        font-size: 0.9rem;
     }
 
     .card h4 {
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 0.9rem;
     }
-    
+
 
     .foto {
-    width: 10rem;           
-    height: 10rem;
-    object-fit: cover;     
-    margin-bottom: 1rem;
-    border: 5px solid white;
-    object-fit: fill;
-}
+        width: 10rem;
+        height: 10rem;
+    }
 }
