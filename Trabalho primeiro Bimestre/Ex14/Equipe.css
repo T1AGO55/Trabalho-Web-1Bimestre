@@ -201,4 +201,23 @@ button:hover {
     border: 5px solid white;
     object-fit: fill;
 }
+
+   .menu-mobile {
+        margin-left: auto;
+        order: 3;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-icon {
+        color: aliceblue;
+        visibility: visible;
+        display: block;
+        order: 3;
+        margin-left: auto;
+    }
+
+    #menu-toggle:checked~.opcoes {
+        display: flex;
+    }
 }
