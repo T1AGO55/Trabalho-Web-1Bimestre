@@ -170,9 +170,19 @@ button:hover {
         display: none;
     }
 
-    .menu-icon {
+      .menu-icon {
+        color: aliceblue;
+        visibility: visible;
         display: block;
+        order: 3;
         margin-left: auto;
+    }
+
+       .menu-mobile {
+        margin-left: auto;
+        order: 3;
+        display: flex;
+        align-items: center;
     }
 
     .Avaliacoes {

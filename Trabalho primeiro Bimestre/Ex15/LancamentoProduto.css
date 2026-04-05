@@ -13,6 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: scroll hidden hidden;
 }
 
 header {
@@ -108,24 +109,27 @@ button {
     margin-right: 1rem;
     border-radius: 20px;
     padding: 2rem;
-    margin-top: 1rem;
+    margin-top: -3rem;
     font-size: 2rem;
     text-align: left;
     gap: 1rem;
 }
 
-.lancamento img{
-    width: 40rem;
+.lancamento img {
+    width: 100%;
     min-height: 50%;
-    border-radius: 15px;
-    box-shadow: 5px black;
+    border: 2px solid black;
+    border-radius: 2rem;
+    background: white;
 }
 
-.lancamento button{
+
+.lancamento button {
     transition: all 0.25ms ease-in;
 }
-.lancamento button:hover{
-  transform: scale(1.05);
+
+.lancamento button:hover {
+    transform: scale(1.05);
 }
 
 
