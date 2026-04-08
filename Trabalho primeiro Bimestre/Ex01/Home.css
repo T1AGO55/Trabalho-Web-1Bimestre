@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  padding-top: 6rem; 
+  padding-top: 6rem;
 
   min-height: 100vh;
   overflow: scroll hidden hidden;
@@ -68,7 +68,7 @@ button {
   max-width: 1200px;
   height: 50vh;
 
-  margin-top: 1rem; 
+  margin-top: 1rem;
   border-radius: 20px;
   overflow: hidden;
 
@@ -77,8 +77,8 @@ button {
   justify-content: center;
   padding-left: 2rem;
 
-  background: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/imagem-home.png");
 
   background-size: cover;
@@ -92,30 +92,54 @@ button {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.banner-home a {
+  width: 250px;
+
+  height: 4rem;
+  margin-top: 2.2rem;
+}
+
+.banner-home button {
+  width: 15rem;
+  height: 4rem;
+  font-size: x-large;
+  transition: transform 0.5s ease;
+
+}
+
+.banner-home button:hover {
+  transform: scale(1.1);
+}
+
 
 .texto-menu {
   width: 95%;
   max-width: 1200px;
-
-  background-color: rgba(202, 201, 201, 0.75);
+  color: rgba(255, 255, 255, 0.909);
+  background-color: rgba(0, 0, 0, 0.9);
   border-radius: 20px;
   padding: 2rem;
   margin-top: 2rem;
   display: flex;
   align-items: center;
   gap: 2rem;
-  font-size: 1.2rem;
+  font-size: 2.5rem;
+  text-align: left;
+  gap: 1rem;
 }
+
 .texto {
   max-width: 70%;
 }
+
 .texto-menu a {
   margin-left: auto;
 }
-.texto-menu button{
- height: 4rem;
- width: 15rem;
- font-size: x-large;
+
+.texto-menu button {
+  height: 4rem;
+  width: 15rem;
+  font-size: x-large;
 }
 
 #menu-toggle {
@@ -155,21 +179,9 @@ button {
   font-weight: bold;
 }
 
-.texto-menu {
-  display: flex;
-  background-color: rgba(202, 201, 201, 0.669);
-  margin-left: 1rem;
-  margin-right: 1rem;
-  border-radius: 20px;
-  padding: 2rem;
-  margin-top: 2rem;
-  font-size: 2.5rem;
-  text-align: left;
-  gap: 1rem;
-}
 
 /* TABLET */
-@media(max-width: 1024px){
+@media(max-width: 1024px) {
   .texto-menu {
     flex-direction: column;
   }
@@ -180,7 +192,8 @@ button {
 }
 
 /* MOBILE */
-@media (max-width: 580px) {
+@media (max-width: 866px) {
+
 
   .botoes-header {
     display: none;
@@ -207,11 +220,11 @@ button {
   }
 
   .texto-menu {
-    font-size: 1rem;
+    font-size: 1.8rem;
     padding: 1.5rem;
   }
 
-  #menu-toggle:checked ~ .opcoes {
-        display: flex;
-    }
+  #menu-toggle:checked~.opcoes {
+    display: flex;
+  }
 }
