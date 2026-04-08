@@ -92,18 +92,31 @@ button {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.banner-home button {
+.banner-home a {
+  width: 250px;
+
   height: 4rem;
-  width: 15rem;
-  font-size: x-large;
-  
+  margin-top: 2.2rem;
 }
+
+.banner-home button {
+  width: 15rem;
+  height: 4rem;
+  font-size: x-large;
+  transition: transform 0.5s ease;
+
+}
+
+.banner-home button:hover {
+  transform: scale(1.1);
+}
+
 
 .texto-menu {
   width: 95%;
   max-width: 1200px;
-
-  background-color: rgba(202, 201, 201, 0.75);
+  color: rgba(255, 255, 255, 0.909);
+  background-color: rgba(0, 0, 0, 0.9);
   border-radius: 20px;
   padding: 2rem;
   margin-top: 2rem;
@@ -179,7 +192,8 @@ button {
 }
 
 /* MOBILE */
-@media (max-width: 580px) {
+@media (max-width: 866px) {
+
 
   .botoes-header {
     display: none;
@@ -206,7 +220,7 @@ button {
   }
 
   .texto-menu {
-    font-size: 1rem;
+    font-size: 1.8rem;
     padding: 1.5rem;
   }
 
