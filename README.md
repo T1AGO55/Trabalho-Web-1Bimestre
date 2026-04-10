@@ -94,7 +94,9 @@ Essa página utiliza:
 
 ## 📸 Demonstração
 
-Adicione aqui prints das telas principais do projeto.
+<img width="1273" height="699" alt="image" src="https://github.com/user-attachments/assets/b25e2b4b-d391-421a-a5ee-d0af8abc929a" />
+
+
 
 ---
 
