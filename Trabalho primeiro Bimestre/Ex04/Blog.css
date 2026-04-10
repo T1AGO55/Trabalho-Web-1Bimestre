@@ -162,9 +162,6 @@ button {
         align-items: center;
     }
 
-    .texto-menu {
-        flex-wrap: wrap;
-    }
 
     .menu-icon {
         color: aliceblue;
