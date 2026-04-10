@@ -103,7 +103,7 @@ Essa página utiliza:
 ## 👨‍💻 Autor
 
 Desenvolvedores:
-**Tiago Toshimitsu**
+**Tiago Toshimitsu\n** e
 **Daniel Bocca Seron**
 
 ---
