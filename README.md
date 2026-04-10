@@ -60,7 +60,7 @@ git clone https://github.com/T1AGO55/Trabalho-Web-1Bimestre.git
 2. Acesse a pasta:
 
 ```bash id="0p9wq2"
-cd Trabalho-Web-1Bimestre
+cd "Trabalho primeiro Bimestre"
 ```
 
 3. Inicie pelo arquivo principal:
