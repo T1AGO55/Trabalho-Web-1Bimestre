@@ -155,7 +155,7 @@ button {
 
 .unidade {
     display: inline-block;
-    height: 2.5rem; /* Deve acompanhar o font-size */
+    height: 2.5rem;
     overflow: hidden;
     line-height: 2.5rem;
 }
